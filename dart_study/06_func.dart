@@ -15,9 +15,9 @@ void sayHello1(String name) {
   print(name);
 }
 
-void sayHello2(String name, [int? age, double? height]) {}
+void sayHello2(String name, [int age, double height]) {}
 
-void sayHello3(String name, {required int age, required double height}) {}
+void sayHello3(String name, {int age,  double height}) {}
 
 void test(Function foo) {
   foo();
