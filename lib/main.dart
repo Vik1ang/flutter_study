@@ -23,13 +23,34 @@ class HYHomePage extends StatelessWidget {
   }
 }
 
-class HYContentBody extends StatelessWidget {
+class HYContentBody extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return HYContentBodyState();
+  }
+}
+
+class HYContentBodyState extends State<HYContentBody> {
+  var flag = true;
+
   @override
   Widget build(BuildContext context) {
-    return const Center(
-        child: Text(
-      "Hello World",
-      style: TextStyle(fontSize: 30, color: Colors.orange),
+    return Center(
+        child: Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        Checkbox(
+            value: flag,
+            onChanged: (value) {
+              setState((){
+                flag = value!;
+              });
+            }),
+        const Text(
+          "同意协议",
+          style: TextStyle(fontSize: 20),
+        ),
+      ],
     ));
   }
 }
