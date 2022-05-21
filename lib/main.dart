@@ -32,8 +32,10 @@ class HYHomeContent extends StatelessWidget {
       children: <Widget>[
         HYHomeProductItem("Apple1", "Macbook1",
             "https://img0.baidu.com/it/u=2698024750,2260552493&fm=253&fmt=auto&app=120&f=JPEG?w=641&h=401"),
+        SizedBox(height: 6),
         HYHomeProductItem("Apple2", "Macbook2",
             "https://img0.baidu.com/it/u=2698024750,2260552493&fm=253&fmt=auto&app=120&f=JPEG?w=641&h=401"),
+        SizedBox(height: 6,),
         HYHomeProductItem("Apple3", "Macbook3",
             "https://img0.baidu.com/it/u=2698024750,2260552493&fm=253&fmt=auto&app=120&f=JPEG?w=641&h=401"),
       ],
@@ -58,6 +60,7 @@ class HYHomeProductItem extends StatelessWidget {
       decoration:
           BoxDecoration(border: Border.all(width: 5, color: Colors.black)),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text(
             title,
